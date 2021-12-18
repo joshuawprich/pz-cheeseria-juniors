@@ -2,8 +2,11 @@ import express = require('express');
 import apiRouter from './routes';
 
 const app = express();
-
 app.use(express.static('public'));
+//For reading json body
+app.use(express.urlencoded())
+app.use(express.json())
+
 app.use(apiRouter);
 
 const port = process.env.PORT || 3000;
