@@ -208,14 +208,15 @@ const App = () => {
       <Dialog open={dialogOpen} onClose={handleDialogClose}>
       <DialogTitle>{cheeseItem?.title}</DialogTitle>
         <List>
-          <DialogContent>
             <ListItem>
-              <p>Category: {cheeseItem?.category}</p>
+              <b>Category: </b> {cheeseItem?.category}
             </ListItem>
             <ListItem>
-              Description: {cheeseItem?.description}
+              <div><b>Description: </b>{cheeseItem?.description}</div>
             </ListItem>
-          </DialogContent>
+            <ListItem>
+              <b>Price: </b> ${cheeseItem?.price}
+            </ListItem>
         </List>
       </Dialog>
     </Wrapper>
